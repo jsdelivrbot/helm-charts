@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "node-monitor-example-chart.fullname" . }}
+  labels:
+    app: {{ include "node-monitor-example-chart.name" . }}
+    chart: {{ include "node-monitor-example-chart.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ include "node-monitor-example-chart.name" . }}
+    release: {{ .Release.Name }}
