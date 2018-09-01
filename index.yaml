@@ -7,5 +7,5 @@ entries:
     description: Node monitor example chart
     name: node-monitor-example-chart
     urls:
-    - https://github.com/sanjeevkumar761/helm-charts/blob/master/node-monitor-example-chart/node-monitor-example-chart-0.1.0.tgz
-    version: 1.0
+    - https://github.com/sanjeevkumar761/helm-charts/blob/master/node-monitor-example-chart-0.1.0.tgz
+    version: "1.0"
